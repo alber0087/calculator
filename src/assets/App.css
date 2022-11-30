@@ -33,6 +33,7 @@ body {
     padding: 10px;
     text-align: right;
     width: 100%;
+    overflow: hidden;
 }
 
 .nums-container {
