@@ -15,7 +15,7 @@ const App = () => {
 	const [total, setTotal] = useState(false)
 	
 	const inputNum = (event) => {
-		if (currentState.includes(".") && event.target.innerText === ".") return;
+		if (currentState.includes(".") && event.target.innerText === ".") return
 	
 		if (total) {
 			setPrevState("")
@@ -77,10 +77,7 @@ const App = () => {
 		setPrevState("")
 		setCurrentState("")
 		setInput("0")
-	}
-
-	
-	
+	}	
 	
 	return (
 		<div className="calculator">
@@ -101,7 +98,7 @@ const App = () => {
 			</div>
 
 			<div className="nums-container">
-			<button className="big-h light-gray ac" onClick={reset} >AC</button>
+			<button className="big-h light-gray ac" onClick={reset} id="clear">AC</button>
 			{nums.map(num => (
 					<button 
 						className={`dark-gray ${num === 0 && 'big-h'}`} 
@@ -111,7 +108,7 @@ const App = () => {
 						{num}
 					</button>
 				))}
-			<button className="light-gray">.</button>	
+			<button className="light-gray" id="decimal" onClick={inputNum}>.</button>	
 			</div>
 
 			<div className="ops-container">
@@ -124,7 +121,7 @@ const App = () => {
 						{op}
 					</button>
 				))}
-				<button className="orange" onClick={equals}>=</button>
+				<button className="orange" onClick={equals} id="equals">=</button>
 			</div>
 		</div>
 	)
